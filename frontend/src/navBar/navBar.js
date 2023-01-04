@@ -10,36 +10,38 @@ export const NavBar=()=>{
     const {logout}=useLogout()
     const [open, setOpen]=useState(false)
     const [navOpen, setNavOpen]=useState(false)
-    const [body, setBody]=useState(false)
+   // const [body, setBody]=useState(false)
     const burgerRef=useRef()
     const handleLogout=()=>{
         logout()
     }
-    
-    const handleClick=()=>{
+    const handleClick1=()=>{
         setOpen(!open)
         setNavOpen(!navOpen)  
-        setBody(!body)
+        //setBody(!body)
     }
+    
+    
 
     useEffect(()=>{
-      const closeNavBar=(e)=>{
-        
-        if(e.path[0] !== burgerRef.current){
-            setNavOpen(false)
-           
+        const handleClick=(e)=>{
+            if(e.composedPath()[0] !== burgerRef.current){
+                setNavOpen(false)
+                setOpen(false)
+                
+               
+            }
         }
-        
-      }
-      
-      document.body.addEventListener('click', closeNavBar)
+       
+        document.body.addEventListener('click', handleClick)
 
-      return ()=> document.body.removeEventListener('click', closeNavBar)
+        return ()=>document.body.removeEventListener('click', handleClick)
         
-    },[])
+    },[navOpen, open])
     
     const toggleClassCheck=open ? "open": "";
     const toggleClassCheck1=navOpen ? "nav-open": "";
+    //const toggleBody= body ? "body": "";
     
     
 
@@ -53,7 +55,7 @@ export const NavBar=()=>{
                         <>
                             <div className="navBar-div-2">
                                 <div className="navBar-div-4">
-                                    <div ref={burgerRef} className={`burger ${toggleClassCheck}`} onClick={handleClick}>
+                                    <div ref={burgerRef} className={`burger ${toggleClassCheck}`} onClick={handleClick1}>
                                         <span></span>
                                         <span></span>
                                         <span></span>
