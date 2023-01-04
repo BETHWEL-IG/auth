@@ -1,0 +1,281 @@
+
+.navBar-nav-1{
+    background-color: white; 
+    width: 98%;
+    margin: 0 auto;  
+}
+
+.navBar-div-2{
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+}
+.navBar-div-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    width: 98%;
+    
+    margin: 10px auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+   
+   
+   
+    
+}
+.navBar-div-3 > *{
+    scroll-snap-align: start;
+    margin: 5px;
+    
+   
+    
+}
+.navBar-div-3 > * a{
+    color: black;
+    padding: 0 5px;
+
+    border-radius: 20px;
+    
+    text-decoration: none;
+  
+}
+
+::-webkit-scrollbar{
+    width: 2px;
+    
+}
+
+
+.navBar-div-4{
+    display: flex;
+    align-items: center;
+}
+.navBar-div-5-auth{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.auth-1 >a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+button {
+    margin: 15px;
+}
+
+.navBar-p-1{
+    margin: 15px;
+}
+navBar-span-1{
+    margin: 10px;
+}
+
+.burger{
+    position: relative;
+    font-size: 1.2em;
+    color: black;
+    cursor: pointer;
+    padding-left: 10px;
+    z-index: 1;
+}
+.burger span{
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 6px;
+    background: black;
+   
+
+}
+.nav{
+    background: white;
+    height: 100%;
+    position: absolute;
+    width: 200px;
+    top: 0px;
+    left: -300px;
+    padding: 20px;
+    padding-top: 80px;
+    z-index: 0;
+    list-style-type: none;
+    border: 1px solid black;
+    
+}
+.nav a{
+    display: block;
+    color:black;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin-bottom: 5px;
+    
+}
+
+
+.nav-open{
+    left: 0;
+   
+}
+.open span:nth-child(1){
+    transform: rotate(45deg) translateY(10px);
+}
+.open span:nth-child(2){
+    opacity: 0;
+    width: 0;
+}
+.open span:nth-child(3){
+    transform: rotate(-45deg) translateY(-10px);
+}
+.nav{
+    transition: ease-in 0.3s;
+}
+.burger span{
+    transition: ease-in 0.3s;
+}
+
+/* mobile responsivenss */
+@media screen and (max-width:620px) {
+    
+    .navBar-nav-1{
+        background-color: white; 
+        width: 98%;
+        margin: 0 auto;  
+    }
+
+    .navBar-div-2{
+        display: flex;
+        flex: 1 1 0;
+        align-items: center;
+        justify-content: space-between;
+        color: black;
+    }
+    .navBar-div-3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:white;
+        width: 98%;
+        
+        margin: 10px auto;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    
+    
+    
+        
+    }
+    .navBar-div-3 > *{
+        scroll-snap-align: start;
+        margin: 5px;
+        
+    
+        
+    }
+    .navBar-div-3 > * a{
+        color: black;
+        padding: 0 5px;
+
+        border-radius: 20px;
+        
+        text-decoration: none;
+    
+    }
+
+    ::-webkit-scrollbar{
+        width: 2px;
+        
+    }
+
+
+    .navBar-div-4{
+        display: flex;
+        align-items: center;
+    }
+    .navBar-div-5{
+        background-color: #555;
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        margin: 15px;
+    }
+
+    .navBar-p-1{
+        margin: 15px;
+    }
+    navBar-span-1{
+        margin: 10px;
+    }
+
+    .burger{
+        position: relative;
+        font-size: 1.2em;
+        color: black;
+        cursor: pointer;
+        padding-left: 10px;
+        z-index: 1;
+    }
+    .burger span{
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-bottom: 6px;
+        background: black;
+    
+
+    }
+    .nav{
+        background: white;
+        height: 100%;
+        position: absolute;
+        width: 100px;
+        top: 0px;
+        left: -300px;
+        padding: 20px;
+        padding-top: 80px;
+        z-index: 0;
+        list-style-type: none;
+        border: 1px solid black;
+        
+    }
+    .nav a{
+        display: block;
+        color:black;
+        font-size: 1.2em;
+        text-decoration: none;
+        margin-bottom: 5px;
+        
+    }
+
+
+    .nav-open{
+        left: 0;
+    
+    }
+    .open span:nth-child(1){
+        transform: rotate(45deg) translateY(10px);
+    }
+    .open span:nth-child(2){
+        opacity: 0;
+        width: 0;
+    }
+    .open span:nth-child(3){
+        transform: rotate(-45deg) translateY(-10px);
+    }
+    .nav{
+        transition: ease-in 0.3s;
+    }
+    .burger span{
+        transition: ease-in 0.3s;
+    }
+
+
+    
+}
+
