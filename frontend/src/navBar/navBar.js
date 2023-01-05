@@ -88,14 +88,14 @@ export const NavBar=()=>{
                     <div className="navBar-div-3">
                         
                         <div><NavLink to={'/'}>Home</NavLink></div>
-                        <div><NavLink to={'/'}>About</NavLink></div>
+                        <div><NavLink to={'/about'}>About</NavLink></div>
                         <div><NavLink to={'/'}>Contact</NavLink></div>
                         <div><NavLink to={'/'}>Services</NavLink></div>
 
 
                         <nav className={`nav ${toggleClassCheck1}`}>
                             <Link to={'/'}>Home</Link>
-                            <Link to={'/'}>About</Link>
+                            <Link to={'/about'}>About</Link>
                             <Link to={'/'}>Contact</Link>
                             <Link to={'/'}>Services</Link>
                         </nav>

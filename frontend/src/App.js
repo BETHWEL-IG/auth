@@ -5,6 +5,7 @@ import { Home } from './components/home/home';
 //import { RootLayout } from './layouts/rootLayout';
 import { useAuthContext } from './hooks/useAuthContext';
 import { NavBar } from './navBar/navBar';
+import { About } from './about/about';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route  index element={user?<Home/>:<Navigate to={'login'}/>}/>
         <Route path='signup' element={!user?<SignupUsers/>:<Navigate to={'/'}/>}/>
         <Route path='login' element={!user?<LoginUsers/>:<Navigate to={'/'}/>}/>
+        <Route path='about' element={user?<About/>:<Navigate to={'/login'}/>}/>
       </Route>
     )
   )
