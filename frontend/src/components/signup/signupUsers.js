@@ -1,10 +1,17 @@
 import { useState } from "react";
 import { useSignupForm } from "./useSigupForm";
+import { useAuthContext } from "../../hooks/useAuthContext";
+import { Navigate } from "react-router-dom";
 
 export const SignupUsers=()=>{
+    const {user}=useAuthContext()
     const [email, setEmail]=useState('')
     const [password, setPassword]=useState('')
     const {signupForm, succcess, error}=useSignupForm()
+
+    if(user){
+        return <Navigate to={'/'}/>
+    }
 
     const handleSubmit=(e)=>{
         e.preventDefault()
